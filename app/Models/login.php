@@ -16,8 +16,5 @@ class login extends Model
         "contraseña"
        
     ];
-
-    public $timestamps=false;
     
-
 }

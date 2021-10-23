@@ -4,6 +4,7 @@ use App\Http\Controllers\ClienteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\PersonaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::delete('/cliente/eliminar/{cliente}', [ClienteController::class,'destroy'
 Route::get('/cliente/consultar/{cliente}', [ClienteController::class,'show']);
 Route::put('/cliente/actualizar/{cliente}', [ClienteController::class,'update']);
 
-
-Route::post('/cliente/login', [loginController::class,'login']);
+Route::post('/cliente/login', [loginController::class,'autenticar']);
 Route::post('/cliente/registrar', [loginController::class,'registrar']);
+
+Route::post('/persona/funciona', [PersonaController::class,'saludar']);
