@@ -18,6 +18,6 @@ class login extends Model
     ];
 
     public $timestamps=false;
-    
+
 
 }

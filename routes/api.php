@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\PersonaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
@@ -20,13 +20,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/cliente',[ClienteController::class,'index']);
-Route::get('/cliente/mostrar', [ClienteController::class,'mostrar']);
-Route::post('/cliente/crear', [ClienteController::class,'store']);
-Route::delete('/cliente/eliminar/{cliente}', [ClienteController::class,'destroy']);
-Route::get('/cliente/consultar/{cliente}', [ClienteController::class,'show']);
-Route::put('/cliente/actualizar/{cliente}', [ClienteController::class,'update']);
+Route::get('/cliente',[PersonaController::class,'index']);
+Route::get('/cliente/mostrar', [PersonaController::class,'mostrar']);
+Route::post('/cliente/crear', [PersonaController::class,'store']);
+Route::delete('/cliente/eliminar/{cliente}', [PersonaController::class,'destroy']);
+Route::get('/cliente/consultar/{cliente}', [PersonaController::class,'show']);
+Route::put('/cliente/actualizar/{cliente}', [PersonaController::class,'update']);
 
 
-Route::post('/cliente/login', [loginController::class,'login']);
+Route::post('/cliente/login', [loginController::class,'autenticar']);
 Route::post('/cliente/registrar', [loginController::class,'registrar']);

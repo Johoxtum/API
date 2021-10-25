@@ -5,22 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class persona extends Model
 {
     use HasFactory;
-    protected $primaryKey='id_cliente';
-    protected $table = 'cliente';
+    protected $primaryKey='id_persona';
+    protected $table = 'persona';
     
     protected $fillable = [
-        "nombre",
+        "nombres",
+        "apellidos",
         "id_tipo_documento",
-        "numero_cedula"
+        "numero_documento", 
+
     ];
     
     
     
     public $timestamps=false;
 
-      
-    
 }
